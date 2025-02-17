@@ -35,3 +35,16 @@ docker run -d --name dns-server -p 53:53/udp -p 53:53/tcp \
     -v $(pwd)/db.example.com:/etc/bind/db.example.com \
     my-dns
 ```
+Exemple :
+
+## Récupérer l'IP d'un conteneur :
+```sh
+docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' nom_du_conteneur
+Pinger un conteneur via son IP :
+```
+
+---
+```sh
+ping 172.18.0.5
+```
+(si c'est son IP dans le réseau Docker)
