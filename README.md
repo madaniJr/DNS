@@ -40,10 +40,11 @@ Exemple :
 ## Récupérer l'IP d'un conteneur :
 ```sh
 docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' nom_du_conteneur
-Pinger un conteneur via son IP :
+
 ```
 
 ---
+## Pinger un conteneur via son IP :
 ```sh
 ping 172.18.0.5
 ```
